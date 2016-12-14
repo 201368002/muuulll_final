@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	window.onload = function () {
+	//변수를 선언합니다.
+	var count = 0;
+	var image = document.getElementById('image');
+	var frames = [
+	    'animate_1.jpg', 'animate_2.jpg', 'animate_3.jpg', 'animate_4.jpg', 'animate_5.jpg', 'animate_0.jpg'
+	];
+	//타이머 반복을 시작합니다.
+	setInterval(function () {
+	    image.src = frames[count % frames.length];
+	    count = count + 1;
+	    }, 1500 );
+	};
+    </script>
+</head>
+<body>
+    <img src = "animate_0.jpg" id = "image" width = "900" height = "350" overflow : hidden; />
+</body>
+</html>

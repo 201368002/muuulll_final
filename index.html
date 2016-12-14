@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Mobile Application </title>
+    <style>
+	body {
+	    margin : 10px 50px 10px 50px;
+	    background-image : url('back.jpg')
+;	}
+	#top { height : 170px }
+	#bottom { height : 50px }
+	#ct { height : 500px }
+	a {
+	    text-decoration : none;
+	    color : black;
+	}
+	#logo {
+	    float : left;	margin:15px 0 0 20px;
+	    color : darkblue;	font-size : 40px;
+	}
+	#idpw {
+	    padding : 30px 10px;
+	    position : absolute;
+	    left : 600px;
+	}
+	#cen {
+	    position : absolute;
+	    left : 50px;
+	}
+	.mainMenu {
+            width:200px;
+            height:30px;
+            margin:0;
+            border:1px solid black;
+            text-align:center;
+            background:white;
+        }
+	.mainMenu:hover {
+            background:#AFEEEE;
+            color:white;
+        }
+	.subMenu {
+            position:absolute;
+            margin-left:15px;
+            margin-top:5px;
+            border-collapse:collapse;
+	    visibility:hidden;
+        }
+        .subMenu td {
+            border:1px solid black;
+            padding:5px;
+            border-collapse:collapse;
+            background:pink;
+            color:black;
+         }
+        .subMenu td:hover {
+            background:#ffceb2;
+        }
+    </style>
+    <script>
+        function showSub(subname) {
+            var sub = document.getElementById(subname);
+            sub.style.visibility = "visible"
+        }
+  	function hideSub(subname) {
+            var sub = document.getElementById(subname);
+            sub.style.visibility = "hidden";
+        }
+	function serch() {
+		alert("검색중입니다.");
+		event.returnValue = false;	//키 입력 취소
+	}
+    </script>
+</head>
+<body>
+<div id = "top">
+    <a id = "logo" href="index.html"> Mobile Application </a>
+    <span id="idpw">
+	<a href="loginform.html" target="center">로그인 </a>||
+	<a href="goin.html" target="center">회원가입</a>   	<!-- target=blank 새창뜨게 해줌 -->
+	<br/>
+	<input type = "text" size = "20" />
+	<input type = "button" value = "검색" onClick = "serch()"/>
+    </span>
+    <br/> <br/> <br/> <br/><br/>
+    <table>
+	<tr>
+	    <td class = "mainMenu" onmouseover = "showSub('sub1')" onmouseout = "hideSub('sub1')"> 홈 
+		<table class="subMenu" id="sub1">
+		    <tr>
+			<td class = "sub"><a href = "menu1_1.html" target="center"> 소개 </a></td>
+			<td class = "sub"><a href = "menu1_2.html" target="center"> 공지사항 </a></td>
+		    </tr>
+		</table>
+	    </td>
+	    <td class = "mainMenu"><a href = "menu3.html" target="center"> 포토갤러리 </a></td>
+	    <td class = "mainMenu"><a href = "menu2.html" target="center"> 애견정보 </a></td>
+	    <td class = "mainMenu"><a href = "menu4.html" target="center"> 여기저기탐방기 </a></td>
+	    <td class = "mainMenu"><a href = "menu5.html" target="center"> 이것저것리뷰 </a></td>
+	    <td class = "mainMenu"><a href = "./memo/memo.php" target="center"> 방명록 </a></td>
+	</tr>
+    </table>
+<hr/>
+</div>
+
+<div id = "ct">
+    <iframe src = "home.html" id="cen" name="center" height="480" width = "900"  frameborder="0" scrolling = "auto" ></iframe>
+</div>
+<hr/>
+<div id = "bottom">
+    <audio src = "music.mp3" controls = "controls" autoplay = "autoplay" id = "music"></audio src>
+    <p><pre> Mobile Application Project 전주대학교 컴퓨터공학과 201368002 김가람
+ [사이트관리운영] [개인정보 보호 관리 책임자] 김가람 Email : muuulll@naver.com | 전라북도 전주시 완산구 전주대학교
+ Copyright (c) 2016 Mobile Application All rights reserved.
+    </pre></p>
+</div>
+</body>
+</html>
